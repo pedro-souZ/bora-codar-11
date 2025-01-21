@@ -7,43 +7,46 @@
     <title>Login</title>
   </head>
   <body>
-    <div id="page">
-      <header>logo</header>
+    <div id="page" class="flex">
+      <div>
+        <header><img src="assets/logo.svg" alt="logo" /></header>
 
-      <main>
-        <div class="headline">
-          <h1>Acesse a plataforma</h1>
-          <p>
-            Faça login ou registre-se para começar a construir seus projetos
-            ainda hoje.
-          </p>
-        </div>
-
-        <form>
-          <div class="input-wrapper">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required />
+        <main>
+          <div class="headline">
+            <h1>Acesse a plataforma</h1>
+            <p>
+              Faça login ou registre-se para começar a construir seus projetos
+              ainda hoje.
+            </p>
           </div>
 
-          <div class="input-wrapper">
-            <div class="label-wrapper">
-              <label for="senha">Senha</label>
-              <a href="#">Esqueceu a senha?</a>
+          <form>
+            <div class="input-wrapper">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" required />
             </div>
 
-            <input type="password" id="senha" />
-            <img class="show-password" src="" alt="" />
-            <img class="hide-password" src="" alt="" />
-          </div>
+            <div class="input-wrapper">
+              <div class="label-wrapper flex">
+                <label for="senha">Senha</label>
+                <a href="#">Esqueceu a senha?</a>
+              </div>
 
-          <button type="submit">Entrar</button>
+              <input type="password" id="senha" />
+              <img class="show-password eye" src="assets/eye-off.svg" alt="" />
+              <img class="hide-password eye hide" src="assets/eye.svg" alt="" />
+            </div>
 
-          <div class="create-acount">
-            Ainda não tem uma conta?
-            <a href="#">Inscreva-se</a>
-          </div>
-        </form>
-      </main>
+            <button type="submit">Entrar</button>
+
+            <div class="create-acount">
+              Ainda não tem uma conta?
+              <a href="#">Inscreva-se</a>
+            </div>
+          </form>
+        </main>
+      </div>
+      <img src="assets/img.jpg" alt="bg-roxo" />
     </div>
   </body>
 </html>

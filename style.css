@@ -13,3 +13,124 @@
 body {
   font-size: 1.6rem;
 }
+
+button {
+  all: unset;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+#page {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+/*pega os primeiro nível de filho (div & img)*/
+#page > * {
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+header img {
+  height: 5.4rem;
+  width: 16rem;
+}
+
+/* pega o primeiro filho depois de page (apenas a div) */
+#page > div {
+  padding: 4rem 11.2rem;
+
+  & main {
+    margin-top: 11.4rem;
+
+    /* mantém o limite máximo do container */
+    & .headline {
+      max-width: 35rem;
+    }
+  }
+}
+
+form {
+  margin-top: 4rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+/* remove os olhos de senha padrão do navegador */
+::-ms-reveal {
+  display: none;
+}
+
+form input {
+  width: 100%;
+
+  background-color: white;
+  border: 0.1rem solid #e2e8f0;
+  border-radius: 0.4rem;
+
+  padding: 1.6rem 1.2rem;
+
+  margin-top: 0.8rem;
+}
+
+/* pega o input que tem um input anterior a ele */
+form .input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
+}
+
+.label-wrapper {
+  justify-content: space-between;
+}
+
+.eye {
+  width: 2rem;
+  height: 2rem;
+
+  position: absolute;
+  top: 52%;
+  right: 2%;
+}
+
+.hide {
+  display: none;
+}
+
+/* tiro todas as propriedades do botão, dai consigo personalizar a linha que fica em volta  */
+form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 2.4rem;
+
+  background: #7c3aed;
+  border-radius: 0.4rem;
+
+  width: 100%;
+
+  font-weight: bold;
+
+  color: white;
+
+  margin-block: 3.2rem; /*coloca margin cima e baixo*/
+}
+
+form button:focus {
+  outline: 2px solid black;
+  border-radius: 0.2rem;
+}
+
+form button:hover {
+  background: #9f67ff;
+}
