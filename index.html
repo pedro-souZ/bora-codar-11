@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Login</title>
   </head>
   <body>
@@ -23,7 +29,13 @@
           <form>
             <div class="input-wrapper">
               <label for="email">E-mail</label>
-              <input type="email" name="email" id="email" required />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Digite seu e-mail"
+              />
             </div>
 
             <div class="input-wrapper">
@@ -32,14 +44,28 @@
                 <a href="#">Esqueceu a senha?</a>
               </div>
 
-              <input type="password" id="senha" />
-              <img class="show-password eye" src="assets/eye-off.svg" alt="" />
-              <img class="hide-password eye hide" src="assets/eye.svg" alt="" />
+              <input
+                type="password"
+                id="senha"
+                placeholder="Digite sua senha"
+              />
+              <img
+                onclick="togglePassword()"
+                class="show-password eye"
+                src="assets/eye-off.svg"
+                alt=""
+              />
+              <img
+                onclick="togglePassword()"
+                class="hide-password eye hide"
+                src="assets/eye.svg"
+                alt=""
+              />
             </div>
 
             <button type="submit">Entrar</button>
 
-            <div class="create-acount">
+            <div class="create-account">
               Ainda não tem uma conta?
               <a href="#">Inscreva-se</a>
             </div>
@@ -48,5 +74,18 @@
       </div>
       <img src="assets/img.jpg" alt="bg-roxo" />
     </div>
+
+    <script>
+      function togglePassword() {
+        document
+          .querySelectorAll(".eye")
+          .forEach((eye) => eye.classList.toggle("hide"));
+
+        const type =
+          senha.getAttribute("type") == "password" ? "text" : "password";
+
+        senha.setAttribute("type", type);
+      }
+    </script>
   </body>
 </html>
